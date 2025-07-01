@@ -144,11 +144,9 @@ A role is assigned to the EC2 instance to allow S3 access.
 
 
 🎉 **Application is Live!**
-![Uploading 16.png…]()
+![16](https://github.com/user-attachments/assets/2c8d6401-9290-4d8f-93e3-f55494d3f566)
+
 
 
 
 ---
-
-## 🎉 Application is Live!
-![App](./img/app.png)
