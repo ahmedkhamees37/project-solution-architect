@@ -13,8 +13,6 @@ Deploy a secure, scalable, and highly available web application on AWS using EC2
 - [Deployment](#deployment)
   - [Prerequisites](#prerequisites)
   - [Step-by-Step Guide](#step-by-step-guide)
-- [Cost Optimization](#cost-optimization)
-- [Cleanup](#cleanup)
 - [License](#license)
 
 ---
@@ -133,25 +131,8 @@ This solution deploys a simple web application (Nginx) on AWS EC2 instances with
 
 ---
 
-## 💡 Cost Optimization
 
-- Use **t3.micro / t3a.micro** instances.
-- Set minimum ASG capacity to **1** during low load.
-- Clean up unused resources after testing.
 
----
-
-## 🧹 Cleanup
-
-To avoid unwanted AWS charges:
-
-- Delete ALB
-- Delete Auto Scaling Group
-- Delete Launch Template
-- Delete IAM Role
-- Delete SNS Topic and CloudWatch Alarms
-
----
 
 ## 📄 License
 
