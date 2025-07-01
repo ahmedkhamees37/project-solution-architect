@@ -3,7 +3,8 @@
 This project demonstrates the deployment of a Java application on AWS using the **Rehosting Migration Strategy**. Multiple AWS services are utilized, including EC2, S3, IAM, Auto Scaling, Elastic Load Balancer (ELB), and Route 53. The code for the deployed application can be accessed here: [Java App](https://github.com/hkhcoder/vprofile-project).
 
 ## 📌 Overview
-![Overall Architecture](./img/overall-architecture.png)
+![1](https://github.com/user-attachments/assets/c7ba746d-3891-4bc7-8ab7-01ea5b33afba)
+
 
 ---
 
@@ -14,20 +15,24 @@ Security groups are configured to manage communication between instances and ser
 
 ✅ **Elastic Load Balancer Security Group**
 The load balancer acts as a proxy for the application, accepting incoming traffic on port **80 (HTTP)**.
-![Elastic Load Balancer Security Group](./img/elb-security-group.png)
+![2](https://github.com/user-attachments/assets/5a6b0649-d5a7-43ff-8a45-00f2d78516ef)
+
 
 ✅ **Tomcat Security Group**
 The Tomcat server hosts the Java application and only accepts traffic from the Elastic Load Balancer.
-![Tomcat Security Group](./img/tomcat-app-security-group.png)
+![3](https://github.com/user-attachments/assets/40989ed1-b7fb-408c-938b-d6fde2bbdb45)
+
 
 ✅ **Backend Security Group**
 This security group regulates traffic for MySQL, Memcached, and RabbitMQ instances.
-![Backend Security Group](./img/backend-security-group.png)
+![4](https://github.com/user-attachments/assets/4058f22e-86ad-4fcf-8a77-6b00c9848253)
+
 
 ---
 
 ### 2️⃣ **EC2 Instances**
-![EC2 Instances](./img/ec2-instances.png)
+![5](https://github.com/user-attachments/assets/019bafad-fdf4-4113-a485-2b884e749876)
+
 
 ✅ **MySQL EC2 Instance**
 User data script to set up the instance:
@@ -83,13 +88,15 @@ sudo apt install -y openjdk-17-jdk tomcat10 git
 
 ### 3️⃣ **Route 53**
 A private **Hosted Zone DNS** is set up for internal service communication.
-![Route 53](./img/route-53.png)
+![6](https://github.com/user-attachments/assets/299ce582-478d-4288-b787-87a704adac13)
+
 
 ---
 
 ### 4️⃣ **S3 Bucket**
 An S3 bucket stores the Java application WAR file for deployment.
-![S3 Bucket](./img/s3-bucket.png)
+![7](https://github.com/user-attachments/assets/813d3d6c-29fd-473b-a23c-475090180626)
+
 
 ---
 
@@ -97,24 +104,29 @@ An S3 bucket stores the Java application WAR file for deployment.
 
 ✅ **S3 Admin IAM User**
 An IAM user with S3 access keys is created.
-![S3 Admin IAM User](./img/s3-iam-user.png)
+![8](https://github.com/user-attachments/assets/f88237f3-3be2-4b8f-86ee-440750daa282)
+
 
 ✅ **S3 Admin IAM Role**
 A role is assigned to the EC2 instance to allow S3 access.
-![S3 Admin Role](./img/s3-admin-role.png)
+![9](https://github.com/user-attachments/assets/ba303cb5-1fba-4f95-8080-67c20e7c6be1)
+
 
 ---
 
 ### 6️⃣ **Elastic Load Balancer**
 
 ✅ **Target Group**
-![Target Group](./img/target-group.png)
+![10](https://github.com/user-attachments/assets/f42c8d8e-bc63-4a9c-8396-e0397db15277)
+
 
 ✅ **ELB Configuration**
-![Elastic Load Balancer](./img/elastic-load-balancer.png)
+![11](https://github.com/user-attachments/assets/f9d9f630-25e1-4a59-809b-3f9e1f23ffd4)
+
 
 ✅ **Listener Configuration**
-![Listener Configuration](./img/listener-configuration.png)
+![12](https://github.com/user-attachments/assets/4ce2ba71-c228-4e30-84ea-f6d97d1e7c7d)
+
 
 ---
 
@@ -122,12 +134,20 @@ A role is assigned to the EC2 instance to allow S3 access.
 
 ✅ **Launch Template**
 1. **AMI Creation for Tomcat Server**
-![AMI](./img/ami.png)
+![13](https://github.com/user-attachments/assets/38ddc145-e9c2-4e3e-ac07-1c8d345c462e)
+
 2. **Launch Template Configuration**
-![Launch Template](./img/launch-template.png)
+![14](https://github.com/user-attachments/assets/85bfa8e9-b6b6-4b39-88f2-0c9493cd293c)
+
 
 ✅ **Auto Scaling Group Configuration**
-![Auto Scaler](./img/auto-scaler.png)
+![14](https://github.com/user-attachments/assets/e617da03-1b68-42c7-9aa9-4205073e682a)
+
+
+🎉 **Application is Live!**
+![Uploading 16.png…]()
+
+
 
 ---
 
