@@ -78,6 +78,8 @@ This solution deploys a simple web application (Nginx) on AWS EC2 instances with
    - Policies:
      - `AmazonEC2ReadOnlyAccess`
      - `CloudWatchAgentServerPolicy`
+  ![Screenshot 2025-07-01 093652](https://github.com/user-attachments/assets/d672df8e-880a-4faa-976e-f765e86cc21e)
+
 
 2. **Prepare User Data Script**
 
