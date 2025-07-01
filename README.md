@@ -25,7 +25,8 @@ This solution deploys a simple web application (Nginx) on AWS EC2 instances with
 
 ## 🏗️ Architecture
 
-![1742896656417](https://github.com/user-attachments/assets/ba73f26a-bcd7-4218-8e61-acc0918d3562)
+![1](https://github.com/user-attachments/assets/ac6ba46c-2b20-4181-95ea-457694c25336)
+
 
 
 
