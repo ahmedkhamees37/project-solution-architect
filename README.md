@@ -2,7 +2,8 @@
 
 This project demonstrates the deployment of a Java web application on AWS using the Rehosting Migration Strategy. The application is hosted on EC2 instances within an Auto Scaling Group to ensure high availability and scalability. An Application Load Balancer (ALB) distributes incoming traffic across multiple instances for optimal performance. AWS best practices for compute scalability, security, and cost optimization are implemented throughout the setup.
 ## 📌 Overview
-![1](https://github.com/user-attachments/assets/c7ba746d-3891-4bc7-8ab7-01ea5b33afba)
+![1740395679727](https://github.com/user-attachments/assets/87fcd004-41e6-4095-84c9-35b9b88ceb86)
+
 
 
 ---
