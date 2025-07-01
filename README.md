@@ -27,7 +27,8 @@ This solution deploys a simple web application (Nginx) on AWS EC2 instances with
 
 ## 🏗️ Architecture
 
-![Architecture Diagram](link-to-your-diagram.png)
+![pro](https://github.com/user-attachments/assets/d304c50f-aa5c-426f-836d-2265b17d0abf)
+
 
 ### **Flow Explanation**
 
@@ -92,30 +93,29 @@ This solution deploys a simple web application (Nginx) on AWS EC2 instances with
     systemctl start nginx
     ```
 
-3. **Create Launch Template**
-   - AMI: Amazon Linux 2
-   - Instance Type: t2.micro
-   - Key Pair: Ahmed.pem
-   - Security Group: Allow **HTTP (80)** and **SSH (22)** from your IP
-   - Attach IAM role
-   - Paste user-data script
+3. **Create ec2**
+  ![Screenshot 2025-07-01 093807](https://github.com/user-attachments/assets/769e1004-04c3-4f20-91b5-a6a992bad952)
+
 
 4. **Create Auto Scaling Group**
-   - Launch template: select above
-   - VPC: choose default/custom
-   - Subnets: select **2+ AZs**
-   - Desired capacity: 2  
-   - Minimum: 1  
-   - Maximum: 3  
-   - Scaling policy: Target tracking (CPU > 50% scale out, < 20% scale in)
+  ![Screenshot 2025-07-01 093514](https://github.com/user-attachments/assets/8d2e6d0b-9d91-4df9-b8cb-ec12c9be00e1)
+![Screenshot 2025-07-01 093523](https://github.com/user-attachments/assets/087ffb8e-5f16-4eac-a78c-843b1d80b4e5)
+![Screenshot 2025-07-01 093536](https://github.com/user-attachments/assets/197dc819-721d-4cc6-9245-6f5b7c87a266)
+![Screenshot 2025-07-01 093546](https://github.com/user-attachments/assets/2ec63d9c-df35-46e3-8cdf-b57808edf027)
+![Screenshot 2025-07-01 093818](https://github.com/user-attachments/assets/b8da32fd-c2b4-4129-aa42-2f7f8cebea50)
 
-5. **Create Application Load Balancer**
+
+
+
+6. **Create Application Load Balancer**
    - Type: Internet-facing
    - Listeners: HTTP (80)
    - Target Group: EC2 Instances
    - Health Check: `/`
+  ![Screenshot 2025-07-01 093830](https://github.com/user-attachments/assets/399139fc-ed71-4b8e-8c6c-fad352533047)
 
-6. **Configure CloudWatch & SNS**
+
+7. **Configure CloudWatch & SNS**
    - **CloudWatch Alarm**
      - Metric: EC2 CPU Utilization
      - Threshold: >70% for 5 minutes
@@ -123,9 +123,13 @@ This solution deploys a simple web application (Nginx) on AWS EC2 instances with
      - Subscribe your email
      - Link to CloudWatch alarm action
 
-7. **Test**
+8. **Test**
    - Access ALB DNS from browser
    - Refresh to see load balancing across instances
+
+![Screenshot 2025-07-01 093840](https://github.com/user-attachments/assets/f1c898d2-47a3-440a-9dac-034291706f7b)
+![Screenshot 2025-07-01 093850](https://github.com/user-attachments/assets/5d8c54ca-7e81-4d55-bba8-92c679a2e753)
+
 
 ---
 
